@@ -1,4 +1,5 @@
 # [Breaking Bad Wiki](https://gautam49.github.io/breaking-bad-wiki/)
+# [Breaking Bad characters Name(https://gautam49.github.io/breaking-bad/)
 
 - [LICENSE](https://github.com/gautam49/breaking-bad-wiki/blob/main/LICENSE)
 
