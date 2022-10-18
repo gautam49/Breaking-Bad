@@ -8,6 +8,7 @@
 - [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [Css](https://developer.mozilla.org/pt-BR/docs/Web/Css)
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/Javascript)
+- [ReactJS](https://reactjs.org/community/support.html)
 - [Git](https://git-scm.com/)
 - [API](https://breakingbadapi.com/)
 
