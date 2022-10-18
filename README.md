@@ -1,4 +1,7 @@
 # [Breaking Bad Wiki](https://gautam49.github.io/breaking-bad-wiki/)
+
+###  An application that lists the most important characters and episodes in the series and their information
+
 # [Breaking Bad characters Name](https://gautam49.github.io/breaking-bad/)
 
 - [License](https://github.com/gautam49/breaking-bad/blob/master/License)
