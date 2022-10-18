@@ -1,35 +1,42 @@
-import { useEffect, useState } from 'react';
-
-import Header from './components/Header';
-import Characters  from './components/Characters';
-
-import { Box } from '@mui/material';
-import { fetchData } from './service/api';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import Header from './components/ui/Header'
+import CharacterGrid from './components/characters/CharacterGrid'
+import Search from './components/ui/Search'
+import './App.css'
 
 const App = () => {
-  const [text, setText] = useState("")
-  const [data, setData] = useState([])
-  
+  const [items, setItems] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [query, setQuery] = useState('')
+
   useEffect(() => {
-    const getData = async () => {
-      const result = await fetchData(text)
-      setData(result.data)
-      console.log(result);
+    const fetchItems = async () => {
+      setIsLoading(true)
+      const result = await axios(
+        `https://www.breakingbadapi.com/api/characters?name=${query}`
+      )
+
+      console.log(result.data)
+
+      setItems(result.data)
+      setIsLoading(false)
     }
-    getData();
-  }, [text]);
 
-  const getText = (text) => {
-    setText(text);
-    console.log(text);
+    fetchItems()
+  }, [query])
+  
+  const queryFunction = (q) =>{
+    setQuery(q)
   }
-
+  
   return (
-    <Box>
-      <Header getText={getText} />
-      <Characters data={data} />
-    </Box>
-  );
+    <div className='container'>
+      <Header />
+      <Search getQuery={queryFunction} />
+      <CharacterGrid isLoading={isLoading} items={items} />
+    </div>
+  )
 }
 
-export default App;
+export default App
